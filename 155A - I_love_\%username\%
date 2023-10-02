@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+
+    lli n, i;
+    cin >> n;
+
+    lli arr[n];
+
+    for (i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    lli min = arr[0], max = arr[0], c = 0;
+
+    for (i = 1; i < n; i++)
+    {
+        if (arr[i] < min)
+        {
+            c++;
+            min = arr[i];
+        }
+        else if (arr[i] > max)
+        {
+            c++;
+            max = arr[i];
+        }
+    }
+
+    cout << c << endl;
+
+    return 0;
+}
