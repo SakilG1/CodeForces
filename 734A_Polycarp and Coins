@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        lli n;
+        cin >> n;
+        lli c1, c2;
+        double c22;
+        c22 = round(n/3.0);
+        c2 = c22;
+        c1 = n-(c2*2);
+        cout << c1 << " " << c2 << endl;
+
+    }
+
+    return 0;
+}
