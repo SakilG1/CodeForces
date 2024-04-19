@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        lli n, m;
+        cin >> n >> m;
+        string x, s;
+        cin >> x >> s;
+
+        lli c = 0, xl, i, sl = m, j, ii,op=0, cc=0;
+
+        while (1)
+        {
+            xl = x.length();
+            for (i = 0; i < xl; i++)
+            {
+                if (x[i] == s[0])
+                {
+                    c = 0;
+                    ii = i;
+                    for (j = 0; j < sl; j++)
+                    {
+                        if (x[ii] == s[j])
+                        {
+                            c++;
+                            ii++;
+                        }
+                        else{
+                            break;
+                        }
+                    }
+                }
+                if(c==sl)
+                {
+                    cout << op << endl;
+                    cc++;
+                    break;
+                }
+            }
+            if(c==sl)
+            {
+                break;
+            }
+            if(xl>sl*2 && op!=0)
+            {
+                break;
+            }
+            x+=x;
+            op++;
+        }
+        if(cc==0)
+        {
+            cout << -1 << endl;
+        }
+    }
+
+    return 0;
+}
