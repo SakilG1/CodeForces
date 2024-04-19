@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+
+    lli t = 1;
+    cin >> t;
+    while (t--)
+    {
+        lli n;
+        cin >> n;
+
+        lli c = 0;
+        if (n != 1)
+        {
+            while (n != 1)
+            {
+                if (n % 6 == 0)
+                {
+                    n /= 6;
+                    c++;
+                }
+                else if ((n * 2) % 6 == 0)
+                {
+                    n *= 2;
+                    c++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            if (c != 0 && n == 1)
+            {
+                cout << c << endl;
+            }
+            else
+            {
+                cout << "-1" << endl;
+            }
+        }
+        else
+        {
+            cout << 0 << endl;
+        }
+    }
+    return 0;
+}
