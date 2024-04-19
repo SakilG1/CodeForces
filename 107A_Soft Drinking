@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+
+    lli n, k, l, c, d, p, nl, np;
+    cin >> n >> k >> l >> c >> d >> p >> nl >> np;
+
+    lli dr = k*l;
+    lli sl = c*d;
+    dr = dr/nl;
+    lli slt = p/np;
+    lli tst = min(dr, min(sl, slt));
+
+    cout << tst/n << endl;
+    
+
+    return 0;
+}
