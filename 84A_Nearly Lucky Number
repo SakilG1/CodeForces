@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str;
+
+    cin >> str;
+
+    int x = str.length(), c=0, i;
+
+    for(i=0; i<x; i++)
+    {
+        if(str[i]=='4' || str[i]=='7')
+        {
+            c++;
+        }
+    }
+
+    if(c==7 || c==4)
+    {
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
