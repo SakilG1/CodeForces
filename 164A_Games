@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli n, i, j;
+    cin >> n;
+    lli ar[n], arr[n];
+
+    for(i=0; i<n; i++)
+    {
+        cin >> ar[i] >> arr[i];
+    }
+
+    lli c=0;
+    //cout << c;
+
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(i==j)
+            {
+                continue;
+            }
+
+            else{
+                if(ar[i]==arr[j])
+                {
+                    c++;
+                }
+            }
+        }
+
+    }
+    cout << c << endl;
+
+    return 0;
+}
