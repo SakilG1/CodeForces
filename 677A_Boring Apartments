@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        string str;
+        cin >> str;
+        lli y = stoi(str);
+
+        lli x = str.length();
+        if (x == 4)
+            x = 10;
+        else if (x == 3)
+            x = 6;
+        else if (x == 2)
+            x = 3;
+
+        x += ((y % 10) - 1) * 10;
+
+        cout << x << endl;
+    }
+    return 0;
+}
