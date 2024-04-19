@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout << "NO" << endl
+#define yes cout << "YES" << endl
+#define inkj i, j, n, m, k, x
+#define fn for (i = 0; i < n; i++)
+#define arr(n)  \
+    lli arr[n]; \
+    fn { cin >> arr[i]; }
+#define all(x) x.begin(), x.end()
+
+typedef pair<lli, lli> pl;
+typedef vector<lli> vl;
+const int mod = 1e9 + 7;
+const lli N = 1e7 + 10;
+
+void crack()
+{
+    lli inkj;
+
+    cin >> n;
+    vl v(n);
+    lli c = 0, d = 0;
+    for (auto &i : v)
+    {
+        cin >> i;
+        if (i % 2 == 0)
+            c = 1;
+        else
+            d = 1;
+    }
+    if (c && d)
+        sort(all(v));
+    for (auto i : v)
+        cout << i << ' ';
+}
+
+int main()
+{
+    lli test_case = 1;
+    // cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
