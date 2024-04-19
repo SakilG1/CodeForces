@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long t = 1;
+    cin >> t;
+    while (t--)
+    {
+        long long str, intt, exp;
+        cin >> str >> intt >> exp;
+        long long z = 0;
+        long long dum = max(z, (intt - str + exp + 2) / 2);
+        long ans = max(z, exp - dum + 1);
+        cout << ans << endl;
+    }
+}
