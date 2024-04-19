@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n-1; i++)
+int main()
+{
+    lli t;
+    cin >> t;
+
+    while (t--)
+    {
+        lli n, k, x;
+        cin >> n >> k >> x;
+
+        lli min, max;
+        min = k*(k+1)/2;
+        max = (n-k+1+n)*k/2;
+
+        if(x>=min && x<=max)
+        {
+            cout << "YES" << endl;
+        }
+
+        else{
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}
