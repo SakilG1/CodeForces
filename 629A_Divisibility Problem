@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for(i=0; i<n; i++)
+int main()
+{
+
+    lli t;
+    cin >> t;
+    while(t--)
+    {
+
+        double a, b;
+        cin >> a >> b;
+        lli c=0;
+        
+        if(a==b)
+        {
+            c=0;
+        }
+        else if(a<b)
+        {
+            c = b-a;
+        }
+        else{
+            c = ((ceil(a/b))*b)-a;
+        }
+
+        cout << c << endl;
+    }
+
+    return 0;
+}
