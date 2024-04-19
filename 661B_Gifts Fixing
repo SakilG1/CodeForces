@@ -1,0 +1,68 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout<<"NO"<<endl
+#define yes cout<<"YES"<<endl
+#define inkj i, j, n, m, k, x, c
+#define fn for(i=0; i<n; i++)
+#define arr(n) lli arr[n]; fn{cin>>arr[i];}
+
+void crack()
+{
+    lli inkj;
+    cin >> n;
+    lli a[n], b[n];
+
+    fn{
+        cin >> a[i];
+    }
+    fn{
+        cin >> b[i];
+    }
+
+    lli ma=a[0], mb=b[0];
+    fn{
+        if(a[i]<ma)
+        {
+            ma = a[i];
+        }
+        if(b[i]<mb)
+        {
+            mb = b[i];
+        }
+    }
+    c=0;
+    fn{
+        if(a[i]>ma && b[i]>mb)
+        {
+            x = min(a[i]-ma, b[i]-mb);
+            a[i] -= x;
+            b[i] -= x;
+            c += x;
+        }
+    }
+    fn{
+        if(a[i]>ma)
+        {
+            c += a[i]-ma;
+        }
+        if(b[i]>mb)
+        {
+            c += b[i]-mb;
+        }
+    }
+    cout << c << endl;
+
+}
+
+int main()
+{
+    lli test_case=1;
+    cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
