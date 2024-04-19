@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli t;
+    cin >> t;
+    while(t--){
+    lli a, b;
+    cin >> a >> b;
+    long double x = ceil(abs(a-b)/10.0);
+    lli n = x;
+    cout << n << endl;
+    }
+    return 0;
+}
