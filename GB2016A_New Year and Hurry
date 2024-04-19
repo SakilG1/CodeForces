@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+    
+    lli n, k;
+    cin >> n >> k;
+
+    lli t = 240-k, c=0, i=1;
+
+    while(t>=i*5)
+    {
+        t -= i*5;
+        c++;
+        i++;
+    }
+
+    if(c<=n)
+    {
+        cout << c << endl;
+    }
+    else{
+        cout << n << endl;
+    }
+ 
+    return 0;
+}
