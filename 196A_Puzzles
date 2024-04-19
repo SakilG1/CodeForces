@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+
+    lli n, m;
+    cin >> n >> m;
+    lli i, arr[m];
+    for(i=0; i<m; i++)
+    {
+        cin >> arr[i];
+    }
+
+    sort(arr, arr+m);
+
+    lli i1=arr[m-1]-arr[m-n];
+
+    for(i=m-1; i-n+1>=0; i--)
+    {
+        if(arr[i]-arr[i-n+1]<i1)
+        {
+            i1 = arr[i]-arr[i-n+1];
+        }
+    }
+
+    cout << i1 << endl;
+    
+
+
+    return 0;
+}
