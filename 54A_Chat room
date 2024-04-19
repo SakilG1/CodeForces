@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str;
+    cin >> str;
+
+    int x = str.length();
+
+    int c=0, i;
+
+    for(i=0; i<x; i++)
+    {
+        if(str[i]=='h' && c==0)
+        {
+            c++;
+        }
+        else if(str[i]=='e' && c==1)
+        {
+            c++;
+        }
+        else if(str[i]=='l' && c==2)
+        {
+            c++;
+        }
+        else if(str[i]=='l' && c==3)
+        {
+            c++;
+        }
+        else if(str[i]=='o' && c==4)
+        {
+            c++;
+        }
+    }
+
+    if(c==5)
+    {
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+
+
+    return 0;
+}
