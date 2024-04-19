@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout<<"NO"<<endl
+#define yes cout<<"YES"<<endl
+#define inkj i, j, n, m, k, x, c
+#define fn for(i=0; i<n; i++)
+#define arr(n) lli arr[n]; fn{cin>>arr[i];}
+
+void crack()
+{
+    lli inkj;
+    
+    lli y, z, t;
+ 
+        cin >> x >> y >> z;
+        if(x > y)swap(x,y);
+        if(x > z)swap(x,z);
+        if(y > z)swap(y,z);
+        if(y == z){
+            yes;
+            cout<<x<<" "<<x<<" "<<z<<endl;
+        }
+        else{
+            no;
+        }
+    
+}
+
+int main()
+{
+    lli test_case=1;
+    cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
