@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli t;
+    cin >> t;
+    while(t--)
+    {
+        string str;
+        cin >> str;
+        lli x = str.length();
+        cout << str[0];
+        for(lli i=1; i<x-1; i+=2)
+        {
+            cout << str[i];
+        }
+        cout << str[x-1] << endl;
+    }
+    return 0;
+}
