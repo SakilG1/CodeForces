@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli n;
+    cin >> n;
+    lli arr[n], i, a[n];
+    fn{
+        cin >> arr[i];
+    }
+    fn{
+        a[i]=arr[i];
+    }
+
+    sort(a, a+n);
+    lli min=a[0], max=a[n-1], i1, i2, need;
+
+    fn{
+        if(arr[i]==max)
+        {
+            i1=i;
+            break;
+        }
+    }
+    //cout << "i1:" << i1;
+    for(i=n-1; i>=0; i--)
+    {
+        if(arr[i]==min)
+        {
+            i2=i;
+            break;
+        }
+    }
+    //cout << "i2:" << i2<< endl;
+    need = i1 + (n-1-i2);
+    if(i1>i2)
+    {
+        need -= 1;
+    }
+    cout << need << endl;
+
+    return 0;
+}
