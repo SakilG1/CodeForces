@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout<<"NO"<<endl
+#define yes cout<<"YES"<<endl
+#define inkj i, j, n, m, k, x, c
+#define fn for(i=0; i<n; i++)
+#define arr(n) lli arr[n]; fn{cin>>arr[i];}
+
+void crack()
+{
+    lli inkj;
+    cin >> n;
+
+    lli digit = 0;
+    x=n;
+    while(x)
+    {
+        digit++;
+        x /= 10;
+    }
+    lli divisor = 0;
+    j = 1;
+    
+    while(digit--)
+    {
+        divisor = divisor*10+1;
+    }
+
+    lli count = n/divisor;
+    divisor /= 10;
+
+    while(divisor--)
+    {
+        count += 9;
+        divisor /= 10;
+    }
+    cout << count << endl;
+
+}
+
+int main()
+{
+    lli test_case=1;
+    cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
