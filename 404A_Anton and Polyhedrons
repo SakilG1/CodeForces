@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli t, c=0;
+    cin >> t;
+    while(t--)
+    {
+        string str;
+        cin >> str;
+
+        if(str[0]=='I')
+            c += 20;
+        else if(str[0]=='D')
+            c += 12;
+        else if(str[0]=='O')
+            c += 8;
+        else if(str[0]=='C')
+            c += 6;
+        else
+            c += 4;
+
+
+    }
+    cout << c << endl;
+
+    return 0;
+}
