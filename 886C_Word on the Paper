@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout << "NO" << endl
+#define yes cout << "YES" << endl
+#define inkj i, j, n, m, k, x, y
+#define fn for (i = 0; i < n; i++)
+#define arr(n)  \
+    lli arr[n]; \
+    fn { cin >> arr[i]; }
+lli t = 1;
+void crack()
+{
+    lli inkj;
+    x=8;
+
+    string str, s;
+    while(x--)
+    {
+        cin >> s;
+        for(i=0; i<8; i++)
+        {
+            if(s[i]!='.')
+            {
+                str += s[i];
+            }
+        }
+    }
+
+    cout << str << endl;
+
+    
+
+
+    
+
+}
+
+int main()
+{
+    lli test_case = 1;
+    cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
