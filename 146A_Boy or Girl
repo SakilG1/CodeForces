@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str;
+
+    cin >> str;
+    int i, j, x=str.length();
+
+    for(i=0; i<x; i++)
+    {
+        for(j=i+1; j<x; j++)
+        {
+            if(str[i]==str[j])
+            {
+                str[j]='-';
+            }
+        }
+    }
+    int c=0;
+    for(i=0; i<x; i++)
+    {
+        if(str[i]!='-')
+        {
+            c++;
+        }
+    }
+
+    if(c%2==0)
+    {
+        cout << "CHAT WITH HER!" << endl;
+    }
+    else{
+        cout << "IGNORE HIM!" << endl;
+    }
+
+    return 0;
+}
