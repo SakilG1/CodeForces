@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        lli n;
+        cin >> n;
+
+        string s;
+        s = to_string(n);
+        lli m = s.size() - 1;
+        string xx;
+        xx = '1';
+        while (m--)
+        {
+            xx += '0';
+        }
+        lli y, z;
+        y = stoi(s);
+        z = stoi(xx);
+        cout << y - z << endl;
+    }
+    return 0;
+}
