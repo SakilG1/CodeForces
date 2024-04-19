@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for(i=0; i<n; i++)
+int main()
+{
+    lli n;
+    cin >> n;
+    lli arr[n], i;
+    fn{
+        cin >> arr[i];
+    }
+    sort(arr, arr+n);
+
+    for(i=0; i<n-1; i++){
+        cout << arr[i] << " ";
+    }
+    cout << arr[n-1] << endl;
+
+    return 0;
+}
