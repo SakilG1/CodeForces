@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    string str;
+    cin >> str;
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+    
+
+    lli i, j=0;
+    lli y = str.length();
+
+    string st;
+
+    for(i=0; i<y; i++)
+    {
+        if(str[i]!='a' && str[i]!='o' && str[i]!='y' && str[i]!='e' && str[i]!='u' && str[i]!='i')
+        {
+            st.push_back(str[i]);
+        }
+       
+    }
+    
+    y = st.length();
+
+    for(i=0; i<y; i++)
+    {
+        cout << "." << st[i];
+    }
+    cout << endl;
+
+    return 0;
+}
