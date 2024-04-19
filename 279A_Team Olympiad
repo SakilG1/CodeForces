@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli n;
+    cin >> n;
+    lli arr[n], i;
+    lli o = 0, t = 0, th = 0;
+
+    for (i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+        if (arr[i] == 1)
+            o++;
+        else if (arr[i] == 2)
+            t++;
+        else
+            th++;
+    }
+    lli m = min(o, min(t, th));
+
+    lli one[m], two[m], three[m];
+    lli x=0, y=0, z=0;
+    for (i = 0; i < n; i++)
+    {
+        if (arr[i] == 1 && x<m)
+        {
+            one[x] = i + 1;
+            x++;
+        }
+        else if (arr[i] == 2 && y<m)
+        {
+            two[y]=i+1;
+            y++;
+        }
+        else if(arr[i]==3 && z<m)
+        {
+            three[z]=i+1;
+            z++;
+        }
+    }
+    cout << m << endl;
+    for(i=0; i<m; i++)
+    {
+        cout << one[i] << " " << two[i] << " " << three[i] << endl;
+    }
+
+    return 0;
+}
