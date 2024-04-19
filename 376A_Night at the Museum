@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout<<"NO"<<endl
+#define yes cout<<"YES"<<endl
+#define inkj i, j, n, m, k, x, c
+#define fn for(i=0; i<n; i++)
+#define arr(n) lli arr[n]; fn{cin>>arr[i];}
+
+void crack()
+{
+    lli inkj;
+    lli arr[26]={0};
+    string str;
+    cin >> str;
+    lli position=0, move=0;
+    x = str.length();
+    lli clock, antClock, now;
+
+    for(i=0; i<x; i++)
+    {
+        now=str[i]-97;
+        if(now >= position)
+        {
+            clock = now-position;
+            antClock = (position-0)+(25-now)+1;
+            move += min(clock, antClock);
+            // cout << clock << " " << antClock << endl;
+            position = now;
+        }
+        else{
+            clock = (25-position)+(now-0)+1;
+            antClock = position - now;
+            move += min(clock, antClock);
+            position = now;
+
+        }
+    }
+    cout << move << endl;
+
+}
+
+int main()
+{
+    lli test_case=1;
+    // cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
