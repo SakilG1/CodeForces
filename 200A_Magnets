@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int n, c=0;
+    char pre;
+    cin >> n;
+    string str;
+    cin >> str;
+    pre=str[0];
+    c++;
+    n--;
+
+    while(n--)
+    {
+        cin >> str;
+        if(str[0]==pre)
+        {
+            continue;
+        }
+        else{
+            c++;
+            pre=str[0];
+        }
+    }
+
+    cout << c << endl;
+
+
+    return 0;
+}
