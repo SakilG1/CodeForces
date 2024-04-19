@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli n;
+    cin >> n;
+
+    lli arr[n], i;
+
+    fn{
+        cin >> arr[i];
+    }
+    sort(arr, arr+n);
+
+   
+
+    lli c=0, x=0;
+
+    for(i=n-1; i>=x; i--)
+    {
+        if(x>i)
+        {
+            break;
+        }
+        if(arr[i]==4)
+        {
+            c++;
+        }
+        else if(arr[i]==3 && arr[x]==1)
+        {
+            c++;
+            x++;
+        }
+        else if(arr[i]==3 && arr[x]!=1)
+        {
+            c++;
+        }
+        else if(arr[i]==2 && arr[x]==2)
+        {
+            c++;
+            x++;
+        }
+        else if(arr[i]==2 && arr[x]==1)
+        {
+            c++;
+            x++;
+            if(arr[x]==1)
+            {
+                x++;
+            }
+        }
+        else if(arr[i]==1)
+        {
+            c++;
+            x += 3;
+        }
+    }
+    cout << c << endl;
+
+    return 0;
+}
