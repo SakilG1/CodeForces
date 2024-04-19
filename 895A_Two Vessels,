@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        double a, b, c, i, m = 0, x, y;
+        cin >> a >> b >> c;
+        x = max(a, b);
+        y = min(a, b);
+
+        if(a==b)
+        {
+            m=0;
+        }
+        else if (c > x)
+        {
+            m = 1;
+        }
+        
+        else
+        {
+            m=0;
+            while (x != y)
+            {
+                x -= c;
+                y += c;
+                m++;
+                if(y>x || x==y)
+                {
+                    break;
+                }
+                else if ((x - y) > c)
+                {
+                    continue;
+                }
+                else
+                {
+                    m++;
+                    break;
+                }
+            }
+        }
+        cout << m << endl;
+    }
+ 
+    return 0;
+}
