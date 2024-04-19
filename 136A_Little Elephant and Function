@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std; 
+#define optimized() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+void solve(){
+    long long n, i;
+    cin>>n;
+    cout << n << ' ';
+    for(i=1; i<n; ++i){
+        cout<< i << ' ';
+}
+}
+int main(){
+    optimized();
+        solve();
+}
