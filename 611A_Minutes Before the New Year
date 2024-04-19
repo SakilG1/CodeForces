@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        lli h, m;
+        cin >> h >> m;
+        lli x = (24-h-1)*60;
+        x += 60-m;
+        cout << x << endl;
+    }
+    return 0;
+}
