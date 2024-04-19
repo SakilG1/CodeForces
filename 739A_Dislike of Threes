@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        lli n;
+        cin >> n;
+        lli i, c = 0;
+
+        for (i = 0; i < n; i++)
+        {
+            c++;
+            while (c % 3 == 0 || c % 10 == 3)
+            {
+                c++;
+            }
+        }
+        cout << c << endl;
+    }
+
+    return 0;
+}
