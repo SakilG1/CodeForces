@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str;
+    cin >> str;
+    int x = str.length();
+    int i, j, r=0, z;
+    for(i=0; i<x; i++)
+    {
+        z=0;
+        if(str[i]=='0')
+        {
+            for(j=i; j<x; j++)
+            {
+                if(str[j]=='0')
+                {
+                    z++;
+                }
+                else{
+                    break;
+                }
+            }
+        }
+        else{
+            for(j=i; j<x; j++)
+            {
+                if(str[j]=='1')
+                {
+                    z++;
+                }
+                else{
+                    break;
+                }
+            }
+        }
+        if(z>r)
+        {
+            r=z;
+        }
+    }
+    if(r>=7)
+    {
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
