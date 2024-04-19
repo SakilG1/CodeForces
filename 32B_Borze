@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    string str;
+    cin >> str;
+    lli x = str.length(), i;
+
+    for (i = 0; i < x; i++)
+    {
+        if (str[i] == '.')
+        {
+            cout << 0;
+        }
+        else if (str[i] == '-' && str[i + 1] == '.')
+        {
+            cout << 1;
+            i++;
+        }
+        else
+        {
+            cout << 2;
+            i++;
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
