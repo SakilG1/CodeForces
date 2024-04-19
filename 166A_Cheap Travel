@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+
+int main()
+{
+    lli n, m, a, b;
+    cin >> n >> m >> a >> b;
+    lli p1, p2, p3;
+    p1 = n*a;
+    //cout << "n/m" << n/m << endl;
+    p2 = ((n/m)*b)+((n-((n/m)*m))*a);
+
+
+    lli p = min(p1, p2);
+
+    if(n/m!=0)
+    {
+        p3 = ((n/m)*b)+b;
+        p = min(p, p3);
+    }
+    if(m>=n)
+    {
+        p3 = b;
+        p = min(p, p3);
+    }
+    cout << p << endl;
+
+    return 0;
+}
