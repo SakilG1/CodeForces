@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int n, x;
+    cin >> n;
+    n++;
+    x=n;
+
+    while(1)
+    {
+        int a, b, c, d;
+        a = n%10;
+        n /= 10;
+        b = n%10;
+        n /= 10;
+        c = n%10;
+        n /= 10;
+        d = n%10;
+        if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d)
+        {
+            cout << x << endl;
+            break;
+        }
+        else{
+            x++;
+            n=x;
+            continue;
+        }
+    }
+
+
+    return 0;
+}
