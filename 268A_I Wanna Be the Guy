@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli n, p, i, q;
+
+    cin >> n;
+    lli ar[n] = {0};
+
+    cin >> p;
+    lli arr[p];
+
+    for (i = 0; i < p; i++)
+    {
+        cin >> arr[i];
+    }
+    for (i = 0; i < p; i++)
+    {
+        ar[arr[i] - 1]++;
+    }
+
+    cin >> q;
+    lli a[q];
+    for (i = 0; i < q; i++)
+    {
+        cin >> a[i];
+    }
+    for (i = 0; i < q; i++)
+    {
+        ar[a[i] - 1]++;
+    }
+
+    lli c = 0;
+    fn
+    {
+        if (ar[i] == 0)
+        {
+            c++;
+        }
+    }
+
+    if (c == 0)
+    {
+        cout << "I become the guy." << endl;
+    }
+    else
+    {
+        cout << "Oh, my keyboard!" << endl;
+    }
+
+    return 0;
+}
