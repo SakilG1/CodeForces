@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double n, m, a;
+    cin >> n >> m >> a;
+    double x=ceil(n/a), y=ceil(m/a);
+    long long int o = x*y;
+    cout << o << endl;
+
+    return 0;
+}
