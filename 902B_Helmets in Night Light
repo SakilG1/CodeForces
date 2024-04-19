@@ -1,0 +1,69 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+
+    lli t;
+    cin >> t;
+    while (t--)
+    {
+        lli n, p;
+        cin >> n >> p;
+        lli i;
+        lli c1 = p * n;
+
+        vector<pair<lli, lli>> arr;
+
+        for (lli i = 0; i < n; i++) {
+            lli a;
+            cin >> a;
+            arr.push_back({a, 0});
+        }
+
+        for (lli i = 0; i < n; i++) {
+            lli b;
+            cin >> b;
+            arr[i].second = b;
+        }
+
+        // sort(arr.begin(), arr.end(), greater<pair<lli, lli>>());
+
+        sort(arr.begin(), arr.end(), [](const pair<lli, lli>& x, const pair<lli, lli>& y) {
+            if (x.second == y.second) {
+                return x.first < y.first; // Sort by the first set if second set values are the same
+            }
+            return x.second < y.second;
+        });
+
+              
+
+        lli c = p, per = 1;
+        i = 0;
+        while (per != n)
+        {
+            if (arr[i].second <= p)
+            {
+                if (per + arr[i].first <= n)
+                {
+                    c += arr[i].first * arr[i].second;
+                    per += arr[i].first;
+                    i++;
+                }
+                else
+                {
+                    c += (n - per) * arr[i].second;
+                    per = n;
+                }
+            }
+            else
+            {
+                c += (n - per) * p;
+                per = n;
+            }
+        }
+        cout << min(c, c1) << endl;
+    }
+
+    return 0;
+}
