@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define no cout << "NO" << endl
+#define yes cout << "YES" << endl
+#define inkj i, j, n, m, k, x, c
+#define fn for (i = 0; i < n; i++)
+#define arr(n)  \
+    lli arr[n]; \
+    fn { cin >> arr[i]; }
+
+void crack()
+{
+    lli inkj;
+    cin >> n;
+    n *= 2;
+    lli a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    int position[110];
+    fill(position, position + 110, 0);
+
+    vector<int> vukku;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (position[a[i]] == 0)
+        {
+            position[a[i]] = 1;
+            vukku.push_back(a[i]);
+        }
+    }
+    int s;
+    s = vukku.size();
+    for (int i = s - 1; i >= 0; i--)
+        cout << vukku[i] << " ";
+    cout << endl;
+}
+
+int main()
+{
+    lli test_case = 1;
+    cin >> test_case;
+    while (test_case--)
+    {
+        crack();
+    }
+    return 0;
+}
