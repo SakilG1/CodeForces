@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for(i=0; i<n; i++)
+int main()
+{
+
+    lli t, i;
+    cin >> t;
+
+    while(t--)
+    {
+        lli n, k;
+        cin >> n >> k;
+        lli arr[n];
+
+        fn{
+            cin >> arr[i];
+        }
+
+        lli first, last, inf, inl;
+        first=last=0;
+
+        fn{
+            if(arr[i]==arr[0])
+            {
+                first++;
+            }
+            if(first==k)
+            {
+                inf=i;
+                break;
+            }
+        }
+
+        for(i=n-1; i>=0; i--){
+            if(arr[i]==arr[n-1])
+            {
+                last++;
+            }
+            if(last==k)
+            {
+                inl=i;
+                break;
+            }
+        }
+
+        if(first==k && last==k && inf<inl)
+        {
+            cout << "YES" << endl;
+        }
+
+
+        else if(first==k && last==k && arr[0]==arr[n-1])
+        {
+            cout << "YES" << endl;
+        }
+
+        else{
+            cout << "NO" << endl;
+        }
+
+
+    }
+
+
+
+    return 0;
+}
