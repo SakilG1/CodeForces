@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli n, k;
+    cin >> n >> k;
+    lli arr[n], i;
+
+    fn{
+        cin >> arr[i];
+    }
+
+    lli x = arr[k-1], c=0;
+
+    fn{
+    if(arr[i]>=x && arr[i]>0)
+        {
+            c++;
+        }
+        else{
+            break;
+        }
+    }
+
+    cout << c << endl;
+
+    return 0;
+}
