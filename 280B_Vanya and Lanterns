@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+int main()
+{
+    lli n, l;
+    cin >> n >> l;
+    
+    lli arr[n], i;
+
+    for(i=0; i<n; i++)
+    {
+        cin >> arr[i];
+    }
+    sort(arr, arr+n);
+    double dis = (arr[0]-0);
+    for(i=1; i<n; i++)
+    {
+        if((arr[i]-arr[i-1])/2.0>dis)
+        {
+            dis = (arr[i]-arr[i-1])/2.0;
+        }
+    }
+    if(arr[n-1]!=l)
+    {
+        if(l-arr[n-1]>dis)
+        {
+            dis = l-arr[n-1];
+        }
+    }
+
+    cout << fixed << setprecision(10) << dis << endl;
+ 
+    return 0;
+}
