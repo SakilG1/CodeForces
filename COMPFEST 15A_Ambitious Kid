@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+#define fn for (i = 0; i < n; i++)
+int main()
+{
+    lli n, i;
+    cin >> n;
+    lli arr[n];
+ 
+    fn{
+        cin >> arr[i];
+    }
+ 
+    lli c=abs(0-arr[0]), ii=0;
+ 
+    fn{
+        if(abs(0-arr[i])<c)
+        {
+            c = abs(0-arr[i]);
+        }
+    }
+ 
+    cout << c << endl;
+ 
+ 
+    return 0;
+}
